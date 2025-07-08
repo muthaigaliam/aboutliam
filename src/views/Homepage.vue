@@ -15,7 +15,7 @@
 
     <!-- Hero -->
     <section :class="[isDark ? 'bg-[#0B0F1C]' : 'bg-yellow-50']" class="text-center py-20 px-4">
-      <h2 class="text-4xl md:text-5xl font-extrabold animate-typing inline-block border-r-2 border-yellow-400 pr-2">
+      <h2 class="text-4xl md:text-5xl font-extrabold animate-typing inline-block">
         Hi, I'm Samuel Mwangi
       </h2>
       <p class="text-2xl mt-4" :class="isDark ? 'text-gray-300' : 'text-gray-800'">Professional Full Stack Developer</p>
@@ -155,7 +155,13 @@
         📞 <a href="tel:+254752341183" class="text-yellow-400 hover:underline">+254 752 341183</a>
       </p>
       <p class="text-lg mb-3">
-        💬 <a href="https://wa.me/254752341183" target="_blank" class="text-green-400 hover:underline">Chat via WhatsApp</a>
+        💬 <a
+          href="https://wa.me/254752341183?text=Hello%20Samuel%2C%20I%20am%20interested%20in%20your%20services."
+          target="_blank"
+          class="text-green-400 hover:underline"
+        >
+          Chat via WhatsApp
+        </a>
       </p>
     </section>
 
@@ -166,7 +172,7 @@
 
     <!-- Floating WhatsApp -->
     <a
-      href="https://wa.me/254752341183"
+      href="https://wa.me/254752341183?text=Hello%20Samuel%2C%20I%20am%20interested%20in%20your%20services."
       target="_blank"
       class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg"
     >
