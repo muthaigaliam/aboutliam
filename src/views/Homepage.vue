@@ -16,7 +16,7 @@
     <!-- Hero -->
     <section :class="[isDark ? 'bg-[#0B0F1C]' : 'bg-yellow-50']" class="text-center py-20 px-4">
       <h2 class="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-extrabold animate-typing inline-block">
-  Hi there, I'm <span class="text-yellow-400">Samuel Mwangi</span>
+  Hi Am <span class="text-white-400">Samuel Mwangi</span>
 </h2>
 
       
@@ -29,7 +29,7 @@
       </p>
       <a
         href="/cv.pdf"
-        download
+        download 
         class="mt-6 inline-block bg-yellow-400 text-black font-semibold px-6 py-2 rounded-full hover:bg-yellow-500 transition"
       >
         Download CV
@@ -121,7 +121,8 @@
             <img :src="t.photo" alt="" class="w-12 h-12 rounded-full object-cover" />
             <div>
               <p class="text-yellow-300 font-semibold">{{ t.name }}</p>
-              <p class="text-sm text-gray-400">{{ t.title }} - Kilimani, Nairobi, Kenya</p>
+              <p class="text-sm text-gray-400">{{ t.title }}</p>
+
             </div>
           </div>
         </div>
@@ -129,12 +130,27 @@
     </section>
 
     <!-- Trusted By -->
-    <section :class="[isDark ? 'bg-[#0F1624]' : 'bg-gray-50']" class="py-20 px-4 text-center reveal">
-      <h3 class="text-3xl font-bold text-yellow-400 mb-8">Trusted By</h3>
-      <div class="flex flex-wrap justify-center gap-10 max-w-5xl mx-auto">
-        <img v-for="logo in trustedLogos" :src="logo" :key="logo" class="h-12 opacity-80 hover:opacity-100 transition" />
-      </div>
-    </section>
+    <!-- Trusted By -->
+<<section :class="[isDark ? 'bg-[#0F1624]' : 'bg-gray-50']" class="py-20 px-4 text-center reveal">
+  <h3 class="text-3xl font-bold text-yellow-400 mb-8">Trusted By</h3>
+  <div class="flex flex-wrap justify-center gap-10 max-w-5xl mx-auto">
+    <a
+      v-for="logo in trustedLogos"
+      :key="logo.src"
+      :href="logo.url"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img
+        :src="logo.src"
+        alt="Trusted Company Logo"
+        class="h-12 opacity-80 hover:opacity-100 grayscale hover:grayscale-0 transition"
+      />
+    </a>
+  </div>
+</section>
+
+
 
     <!-- Location -->
     <section :class="[isDark ? 'bg-[#121826]' : 'bg-yellow-50']" class="py-20 px-4 text-center">
@@ -219,46 +235,59 @@ const pricingPlans = [
   { name: 'Pro', price: '49,999', features: ['Multi-page Site', 'Animations', 'SEO Setup', 'Hosting Support'] },
   { name: 'Enterprise', price: '99,999', features: ['Dashboard or Platform', 'API Integration', 'Full Support'] }
 ]
-
 const testimonials = [
   {
     name: 'James Clinton',
-    title: 'CEO, J-Tech Group',
+    title: 'CEO, J-Tech Group (New York, USA)',
     message: 'Samuel built us a great web solution that increased client conversions by 40%. Highly recommended!',
     photo: 'https://randomuser.me/api/portraits/men/32.jpg'
   },
   {
     name: 'Frank Liu',
-    title: 'Marketing Lead, SolarX',
+    title: 'Marketing Lead, SolarX (Beijing, China)',
     message: 'A pleasure to work with Samuel. His Vue skills are top-notch and always delivers on time.',
-    photo: 'https://randomuser.me/api/portraits/women/45.jpg'
+    photo: 'https://randomuser.me/api/portraits/men/44.jpg'
   },
   {
     name: 'Brian Faith',
-    title: 'CTO, Fintech254',
+    title: 'CTO, Fintech254 (London, UK)',
     message: 'Samuel developed a secure investment backend for us. He knows clean code and great UI.',
     photo: 'https://randomuser.me/api/portraits/men/56.jpg'
   },
   {
     name: 'Mercy Frank',
-    title: 'Founder, HealthPlus',
+    title: 'Founder, HealthPlus (Cape Town, South Africa)',
     message: 'Professional and always delivers. Our dashboard is loved by our team!',
     photo: 'https://randomuser.me/api/portraits/women/68.jpg'
   },
   {
     name: 'Kevin Keivs',
-    title: 'Lead Developer, SmartLogi',
+    title: 'Lead Developer, SmartLogi (Toronto, Canada)',
     message: 'Working with Samuel felt like having a co-founder. His systems just work!',
     photo: 'https://randomuser.me/api/portraits/men/90.jpg'
   }
 ]
-
 const trustedLogos = [
-  'https://cryptologos.cc/logos/trust-wallet-token-trust-logo.png',
-  'https://cryptologos.cc/logos/binance-coin-bnb-logo.png',
-  'https://seeklogo.com/images/F/flutterwave-logo-CE123DD4F1-seeklogo.com.png',
-  'https://seeklogo.com/images/P/paystack-logo-40DA8D39D0-seeklogo.com.png'
+  {
+    src: 'https://cryptologos.cc/logos/trust-wallet-token-trust-logo.png',
+    url: 'https://trustwallet.com',
+  },
+  {
+    src: 'https://cryptologos.cc/logos/binance-coin-bnb-logo.png',
+    url: 'https://www.binance.com',
+  },
+  {
+    src: 'https://seeklogo.com/images/F/flutterwave-logo-CE123DD4F1-seeklogo.com.png',
+    url: 'https://www.flutterwave.com',
+  },
+  {
+    src: 'https://seeklogo.com/images/P/paystack-logo-40DA8D39D0-seeklogo.com.png',
+    url: 'https://paystack.com',
+  },
 ]
+
+
+
 
 onMounted(() => {
   const revealElements = document.querySelectorAll('.reveal')
