@@ -5,6 +5,30 @@
     ref="container"
   >
     <!-- Navbar -->
+     <!-- Navbar -->
+<header
+  :class="[isDark ? 'bg-[#0B0F1C] text-yellow-400' : 'bg-yellow-100 text-gray-900']"
+  class="flex justify-between items-center px-6 py-4 shadow-md transition-colors duration-500"
+>
+  <!-- Title -->
+  <h1
+    class="text-2xl font-bold"
+    :class="isDark ? 'text-yellow-400' : 'text-yellow-600'"
+  >
+    Samuel Mwangi
+  </h1>
+
+  <!-- 🌙 Toggle Button -->
+  <button
+    @click="isDark = !isDark"
+    class="text-2xl hover:text-yellow-400 transition duration-300"
+    title="Toggle Theme"
+  >
+    <span v-if="isDark">🌞</span>
+    <span v-else>🌙</span>
+  </button>
+</header>
+
     <header :class="[isDark ? 'bg-[#0B0F1C]' : 'bg-yellow-100']" class="flex justify-between items-center px-6 py-4 shadow-md">
       <h1 :class="[isDark ? 'text-yellow-400' : 'text-yellow-600']" class="text-2xl font-bold">Samuel Mwangi</h1>
       <button @click="isDark = !isDark" class="text-xl hover:text-yellow-400 transition">
