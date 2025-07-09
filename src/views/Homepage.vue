@@ -15,9 +15,13 @@
 
     <!-- Hero -->
     <section :class="[isDark ? 'bg-[#0B0F1C]' : 'bg-yellow-50']" class="text-center py-20 px-4">
-      <h2 class="text-4xl md:text-5xl font-extrabold animate-typing inline-block">
-        Hi, I'm Samuel Mwangi
-      </h2>
+      <h2 class="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-extrabold animate-typing inline-block">
+  Hi there, I'm <span class="text-yellow-400">Samuel Mwangi</span>
+</h2>
+
+      
+          
+      
       <p class="text-2xl mt-4" :class="isDark ? 'text-gray-300' : 'text-gray-800'">Professional Full Stack Developer</p>
       <p class="mt-6 max-w-2xl mx-auto leading-7" :class="isDark ? 'text-gray-400' : 'text-gray-700'">
         I build secure, scalable, and modern web applications with clean architecture and great user experience. I'm
@@ -211,38 +215,38 @@ const projects = [
 ]
 
 const pricingPlans = [
-  { name: 'Basic', price: '4,999', features: ['1-page Website', 'Contact Form', 'WhatsApp Button'] },
-  { name: 'Pro', price: '14,999', features: ['Multi-page Site', 'Animations', 'SEO Setup', 'Hosting Support'] },
-  { name: 'Enterprise', price: '29,999', features: ['Dashboard or Platform', 'API Integration', 'Full Support'] }
+  { name: 'Basic', price: '19,999', features: ['1-page Website', 'Contact Form', 'WhatsApp Button'] },
+  { name: 'Pro', price: '49,999', features: ['Multi-page Site', 'Animations', 'SEO Setup', 'Hosting Support'] },
+  { name: 'Enterprise', price: '99,999', features: ['Dashboard or Platform', 'API Integration', 'Full Support'] }
 ]
 
 const testimonials = [
   {
-    name: 'James Otieno',
+    name: 'James Clinton',
     title: 'CEO, J-Tech Group',
     message: 'Samuel built us a great web solution that increased client conversions by 40%. Highly recommended!',
     photo: 'https://randomuser.me/api/portraits/men/32.jpg'
   },
   {
-    name: 'Jane Wanjiku',
+    name: 'Frank Liu',
     title: 'Marketing Lead, SolarX',
     message: 'A pleasure to work with Samuel. His Vue skills are top-notch and always delivers on time.',
     photo: 'https://randomuser.me/api/portraits/women/45.jpg'
   },
   {
-    name: 'Brian Kiprotich',
+    name: 'Brian Faith',
     title: 'CTO, Fintech254',
     message: 'Samuel developed a secure investment backend for us. He knows clean code and great UI.',
     photo: 'https://randomuser.me/api/portraits/men/56.jpg'
   },
   {
-    name: 'Mercy Chebet',
+    name: 'Mercy Frank',
     title: 'Founder, HealthPlus',
     message: 'Professional and always delivers. Our dashboard is loved by our team!',
     photo: 'https://randomuser.me/api/portraits/women/68.jpg'
   },
   {
-    name: 'Kevin Njoroge',
+    name: 'Kevin Keivs',
     title: 'Lead Developer, SmartLogi',
     message: 'Working with Samuel felt like having a co-founder. His systems just work!',
     photo: 'https://randomuser.me/api/portraits/men/90.jpg'
