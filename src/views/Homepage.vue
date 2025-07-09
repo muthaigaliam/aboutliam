@@ -105,6 +105,25 @@
         </div>
       </div>
     </section>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center mt-6">
+  <!-- Sign Up Button -->
+  <router-link
+    to="/signup"
+    class="bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-full shadow transition duration-300"
+  >
+    Sign Up
+  </router-link>
+
+  <!-- Login Button -->
+  <router-link
+    to="/login"
+    class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-full shadow transition duration-300"
+  >
+    Login
+  </router-link>
+</div>
+
+
 
     <!-- Testimonials -->
     <section :class="[isDark ? 'bg-[#121826]' : 'bg-gray-100']" class="py-20 px-4 text-center reveal">
